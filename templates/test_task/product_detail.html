@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+
+{% if messages %}
+{% for message in messages %}
+<div class="alert alert-{{ message.tags }}">{{ message }}</div>
+{% endfor %}
+{% endif %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h1>{{ product.name }}</h1>
+            <div class="col-xs-12">
+                Description: {{ product.description }}
+            </div>
+            <div class="col-xs-12">
+                Price: {{ product.price }}
+            </div>
+
+            <div class="col-xs-12">
+                {% if like_count > 0 %}
+                <strong>Likes:</strong> {{ like_count }}
+                {% endif %}
+            </div>
+
+            <div class="col-xs-12 like-this">
+                {% if like == False %}
+                <span>Like this: </span>
+                <a href="{% url 'test_task:add_like' product.id%}">
+                    <img class="like-image" width="32px" src="{% static 'images/like_active.png' %}">
+                </a>
+                {% endif %}
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<div class="col-xs-12">
+    <h2 class="text-center">Add a comment</h2>
+    <form method="post" action="{% url 'test_task:product_detail' product.slug %}">
+        {% csrf_token %}
+        {{ form.product.as_hidden }}
+        <div class="form-group">
+            {% if form.name.errors %}
+            <ul class="form-errors">
+                {% for error in form.name.errors %}
+                <li><span class="fa fa-exclamation-triangle"></span>
+                    <strong>{{ error|escape }}</strong></li>
+                {% endfor %}
+            </ul> {% endif %}
+            {{ form.name.label_tag }}
+            {{ form.name }}
+        </div>
+
+        <div class="form-group">
+            {% if form.comment.errors %}
+            <ul class="form-errors">
+                {% for error in form.comment.errors %}
+                <li><span class="fa fa-exclamation-triangle"></span>
+                    <strong>{{ error|escape }}</strong></li>
+                {% endfor %}
+            </ul> {% endif %}
+            {{ form.comment.label_tag }}
+            {{ form.comment }}
+        </div>
+
+        <input type="submit" value="Submit" class="btn btn-default">
+    </form>
+    {% if comments %}
+    <h2 class="text-center">Comments</h2>
+
+    <div class="col-xs-12 product-comments">
+        {% for item in comments %}
+        <div class="comment-container col-xs-12">
+            <div class="col-xs-12">
+                Name: {{ item.name }}
+            </div>
+            <div class="col-xs-12">
+                Comment: {{ item.comment }}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

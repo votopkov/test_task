@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+<div class="container product-list">
+    <div class="row">
+         <div class="col-xs-3 col-xs-offset-9">
+            <strong>Order by:</strong>
+            <form>
+                <select name="order_by">
+                    <option value="action_count">Likes +</option>
+                    <option value="-action_count">Likes -</option>
+                </select>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        <div class="col-xs-12 product-list-container">
+            {% load endless %}
+            {% paginate 2 products %}
+            {% for item in products %}
+            <div class="product-container col-xs-12">
+                <div class="col-xs-5 product-name">
+                    Title: <a href="{% url 'test_task:product_detail' item.slug %}">{{ item.name }}</a>
+                </div>
+                <div class="col-xs-5 product-description">
+                    Price: {{ item.price }}
+                </div>
+                <div class="col-xs-2">
+                    Likes: {{ item.product_like_count }}
+                </div>
+                <div class="col-xs-12 product-price">
+                    Description: {{ item.description }}
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+        <div class="text-center show-pages col-xs-12">{% show_pages %}</div>
+    </div>
+
+</div>
+
+{% endblock %}

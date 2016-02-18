@@ -1,0 +1,12 @@
+Django==1.8
+django-autoslug==1.7.2
+django-autoslug-field==0.2.3
+django-endless-pagination==2.0
+flake8==2.5.1
+httplib2==0.9.2
+mccabe==0.3.1
+MySQL-python==1.2.5
+pep8==1.7.0
+pyflakes==1.0.0
+six==1.10.0
+wheel==0.24.0

@@ -1,0 +1,1088 @@
+[
+{
+    "fields": {
+        "model": "logentry",
+        "app_label": "admin"
+    },
+    "model": "contenttypes.contenttype",
+    "pk": 1
+},
+{
+    "fields": {
+        "model": "permission",
+        "app_label": "auth"
+    },
+    "model": "contenttypes.contenttype",
+    "pk": 2
+},
+{
+    "fields": {
+        "model": "group",
+        "app_label": "auth"
+    },
+    "model": "contenttypes.contenttype",
+    "pk": 3
+},
+{
+    "fields": {
+        "model": "user",
+        "app_label": "auth"
+    },
+    "model": "contenttypes.contenttype",
+    "pk": 4
+},
+{
+    "fields": {
+        "model": "contenttype",
+        "app_label": "contenttypes"
+    },
+    "model": "contenttypes.contenttype",
+    "pk": 5
+},
+{
+    "fields": {
+        "model": "session",
+        "app_label": "sessions"
+    },
+    "model": "contenttypes.contenttype",
+    "pk": 6
+},
+{
+    "fields": {
+        "model": "product",
+        "app_label": "test_task"
+    },
+    "model": "contenttypes.contenttype",
+    "pk": 7
+},
+{
+    "fields": {
+        "model": "likes",
+        "app_label": "test_task"
+    },
+    "model": "contenttypes.contenttype",
+    "pk": 8
+},
+{
+    "fields": {
+        "model": "comment",
+        "app_label": "test_task"
+    },
+    "model": "contenttypes.contenttype",
+    "pk": 9
+},
+{
+    "fields": {
+        "description": "asdasdasdasdasd",
+        "price": 123123,
+        "modified_at": "2016-02-17T16:58:39.904Z",
+        "slug": "asdasdasdasd",
+        "created_at": "2016-02-17T15:57:52.146Z",
+        "name": "asdasdasdasdasd"
+    },
+    "model": "test_task.product",
+    "pk": 2
+},
+{
+    "fields": {
+        "description": "Mobile",
+        "price": 200,
+        "modified_at": "2016-02-17T17:15:14.125Z",
+        "slug": "mobile",
+        "created_at": "2016-02-17T17:15:14.125Z",
+        "name": "Mobile"
+    },
+    "model": "test_task.product",
+    "pk": 3
+},
+{
+    "fields": {
+        "description": "Mobile2",
+        "price": 123123,
+        "modified_at": "2016-02-17T17:15:33.156Z",
+        "slug": "mobile2",
+        "created_at": "2016-02-17T17:15:33.156Z",
+        "name": "Mobile"
+    },
+    "model": "test_task.product",
+    "pk": 4
+},
+{
+    "fields": {
+        "description": "Telephone",
+        "price": 1231,
+        "modified_at": "2016-02-17T17:16:03.359Z",
+        "slug": "telephone",
+        "created_at": "2016-02-17T17:16:03.359Z",
+        "name": "Telephone"
+    },
+    "model": "test_task.product",
+    "pk": 5
+},
+{
+    "fields": {
+        "comment": "sdf",
+        "product": 3,
+        "pub_date": "2016-02-17T20:29:54.925Z",
+        "name": "sdf"
+    },
+    "model": "test_task.comment",
+    "pk": 1
+},
+{
+    "fields": {
+        "comment": "aaaaaaaaaaaaaaa",
+        "product": 3,
+        "pub_date": "2016-02-17T20:36:36.997Z",
+        "name": "aaaaaaaaaaaaa"
+    },
+    "model": "test_task.comment",
+    "pk": 2
+},
+{
+    "fields": {
+        "comment": "aaaaaaaaaaaaaaa",
+        "product": 3,
+        "pub_date": "2016-02-17T20:36:39.304Z",
+        "name": "aaaaaaaaaaaaa"
+    },
+    "model": "test_task.comment",
+    "pk": 3
+},
+{
+    "fields": {
+        "comment": "aaaaaaaaaaaaaaa",
+        "product": 3,
+        "pub_date": "2016-02-17T20:36:40.859Z",
+        "name": "aaaaaaaaaaaaa"
+    },
+    "model": "test_task.comment",
+    "pk": 4
+},
+{
+    "fields": {
+        "comment": "aaaaaaaaaaaaaaa",
+        "product": 3,
+        "pub_date": "2016-02-17T20:36:41.630Z",
+        "name": "aaaaaaaaaaaaa"
+    },
+    "model": "test_task.comment",
+    "pk": 5
+},
+{
+    "fields": {
+        "comment": "zzz",
+        "product": 3,
+        "pub_date": "2016-02-17T20:41:54.792Z",
+        "name": "aaaa"
+    },
+    "model": "test_task.comment",
+    "pk": 6
+},
+{
+    "fields": {
+        "comment": "444",
+        "product": 3,
+        "pub_date": "2016-02-17T20:43:53.612Z",
+        "name": "4444"
+    },
+    "model": "test_task.comment",
+    "pk": 7
+},
+{
+    "fields": {
+        "comment": "444",
+        "product": 3,
+        "pub_date": "2016-02-17T20:43:57.292Z",
+        "name": "444"
+    },
+    "model": "test_task.comment",
+    "pk": 8
+},
+{
+    "fields": {
+        "comment": "123",
+        "product": 4,
+        "pub_date": "2016-02-17T20:56:06.169Z",
+        "name": "123"
+    },
+    "model": "test_task.comment",
+    "pk": 9
+},
+{
+    "fields": {
+        "comment": "123aaaaaaaa",
+        "product": 4,
+        "pub_date": "2016-02-17T20:56:14.946Z",
+        "name": "123"
+    },
+    "model": "test_task.comment",
+    "pk": 10
+},
+{
+    "fields": {
+        "comment": "Comment",
+        "product": 2,
+        "pub_date": "2016-02-17T20:59:25.395Z",
+        "name": "Name"
+    },
+    "model": "test_task.comment",
+    "pk": 11
+},
+{
+    "fields": {
+        "comment": "Comment",
+        "product": 2,
+        "pub_date": "2016-02-17T20:59:35.067Z",
+        "name": "Nam"
+    },
+    "model": "test_task.comment",
+    "pk": 12
+},
+{
+    "fields": {
+        "comment": "asdasd",
+        "product": 5,
+        "pub_date": "2016-02-17T22:20:56.552Z",
+        "name": "asdasaaasssasda"
+    },
+    "model": "test_task.comment",
+    "pk": 13
+},
+{
+    "fields": {
+        "comment": "asdasd",
+        "product": 5,
+        "pub_date": "2016-02-17T22:21:30.269Z",
+        "name": "asdasaaasssasda"
+    },
+    "model": "test_task.comment",
+    "pk": 14
+},
+{
+    "fields": {
+        "comment": "fdg",
+        "product": 5,
+        "pub_date": "2016-02-17T22:21:39.597Z",
+        "name": "d"
+    },
+    "model": "test_task.comment",
+    "pk": 15
+},
+{
+    "fields": {
+        "comment": "fdgfg",
+        "product": 5,
+        "pub_date": "2016-02-17T22:21:43.270Z",
+        "name": "d"
+    },
+    "model": "test_task.comment",
+    "pk": 16
+},
+{
+    "fields": {
+        "comment": "fdgfg",
+        "product": 5,
+        "pub_date": "2016-02-17T22:21:47.511Z",
+        "name": "dfgdfgd"
+    },
+    "model": "test_task.comment",
+    "pk": 17
+},
+{
+    "fields": {
+        "comment": "aaaa",
+        "product": 5,
+        "pub_date": "2016-02-17T22:22:15.176Z",
+        "name": "aaaa"
+    },
+    "model": "test_task.comment",
+    "pk": 18
+},
+{
+    "fields": {
+        "comment": "sdfsdf",
+        "product": 5,
+        "pub_date": "2016-02-17T22:23:26.649Z",
+        "name": "sdf"
+    },
+    "model": "test_task.comment",
+    "pk": 19
+},
+{
+    "fields": {
+        "comment": "sdfsdf",
+        "product": 5,
+        "pub_date": "2016-02-17T22:23:48.535Z",
+        "name": "sdf"
+    },
+    "model": "test_task.comment",
+    "pk": 20
+},
+{
+    "fields": {
+        "comment": "sssss",
+        "product": 5,
+        "pub_date": "2016-02-17T22:23:53.690Z",
+        "name": "ssss"
+    },
+    "model": "test_task.comment",
+    "pk": 21
+},
+{
+    "fields": {
+        "comment": "aaaa",
+        "product": 2,
+        "pub_date": "2016-02-18T12:17:05.208Z",
+        "name": "aaa"
+    },
+    "model": "test_task.comment",
+    "pk": 22
+},
+{
+    "fields": {
+        "comment": "aaaa",
+        "product": 2,
+        "pub_date": "2016-02-18T12:17:09.414Z",
+        "name": "aaaa"
+    },
+    "model": "test_task.comment",
+    "pk": 23
+},
+{
+    "fields": {
+        "codename": "add_logentry",
+        "name": "Can add log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ]
+    },
+    "model": "auth.permission",
+    "pk": 1
+},
+{
+    "fields": {
+        "codename": "change_logentry",
+        "name": "Can change log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ]
+    },
+    "model": "auth.permission",
+    "pk": 2
+},
+{
+    "fields": {
+        "codename": "delete_logentry",
+        "name": "Can delete log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ]
+    },
+    "model": "auth.permission",
+    "pk": 3
+},
+{
+    "fields": {
+        "codename": "add_permission",
+        "name": "Can add permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ]
+    },
+    "model": "auth.permission",
+    "pk": 4
+},
+{
+    "fields": {
+        "codename": "change_permission",
+        "name": "Can change permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ]
+    },
+    "model": "auth.permission",
+    "pk": 5
+},
+{
+    "fields": {
+        "codename": "delete_permission",
+        "name": "Can delete permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ]
+    },
+    "model": "auth.permission",
+    "pk": 6
+},
+{
+    "fields": {
+        "codename": "add_group",
+        "name": "Can add group",
+        "content_type": [
+            "auth",
+            "group"
+        ]
+    },
+    "model": "auth.permission",
+    "pk": 7
+},
+{
+    "fields": {
+        "codename": "change_group",
+        "name": "Can change group",
+        "content_type": [
+            "auth",
+            "group"
+        ]
+    },
+    "model": "auth.permission",
+    "pk": 8
+},
+{
+    "fields": {
+        "codename": "delete_group",
+        "name": "Can delete group",
+        "content_type": [
+            "auth",
+            "group"
+        ]
+    },
+    "model": "auth.permission",
+    "pk": 9
+},
+{
+    "fields": {
+        "codename": "add_user",
+        "name": "Can add user",
+        "content_type": [
+            "auth",
+            "user"
+        ]
+    },
+    "model": "auth.permission",
+    "pk": 10
+},
+{
+    "fields": {
+        "codename": "change_user",
+        "name": "Can change user",
+        "content_type": [
+            "auth",
+            "user"
+        ]
+    },
+    "model": "auth.permission",
+    "pk": 11
+},
+{
+    "fields": {
+        "codename": "delete_user",
+        "name": "Can delete user",
+        "content_type": [
+            "auth",
+            "user"
+        ]
+    },
+    "model": "auth.permission",
+    "pk": 12
+},
+{
+    "fields": {
+        "codename": "add_contenttype",
+        "name": "Can add content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ]
+    },
+    "model": "auth.permission",
+    "pk": 13
+},
+{
+    "fields": {
+        "codename": "change_contenttype",
+        "name": "Can change content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ]
+    },
+    "model": "auth.permission",
+    "pk": 14
+},
+{
+    "fields": {
+        "codename": "delete_contenttype",
+        "name": "Can delete content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ]
+    },
+    "model": "auth.permission",
+    "pk": 15
+},
+{
+    "fields": {
+        "codename": "add_session",
+        "name": "Can add session",
+        "content_type": [
+            "sessions",
+            "session"
+        ]
+    },
+    "model": "auth.permission",
+    "pk": 16
+},
+{
+    "fields": {
+        "codename": "change_session",
+        "name": "Can change session",
+        "content_type": [
+            "sessions",
+            "session"
+        ]
+    },
+    "model": "auth.permission",
+    "pk": 17
+},
+{
+    "fields": {
+        "codename": "delete_session",
+        "name": "Can delete session",
+        "content_type": [
+            "sessions",
+            "session"
+        ]
+    },
+    "model": "auth.permission",
+    "pk": 18
+},
+{
+    "fields": {
+        "codename": "add_product",
+        "name": "Can add product",
+        "content_type": [
+            "test_task",
+            "product"
+        ]
+    },
+    "model": "auth.permission",
+    "pk": 19
+},
+{
+    "fields": {
+        "codename": "change_product",
+        "name": "Can change product",
+        "content_type": [
+            "test_task",
+            "product"
+        ]
+    },
+    "model": "auth.permission",
+    "pk": 20
+},
+{
+    "fields": {
+        "codename": "delete_product",
+        "name": "Can delete product",
+        "content_type": [
+            "test_task",
+            "product"
+        ]
+    },
+    "model": "auth.permission",
+    "pk": 21
+},
+{
+    "fields": {
+        "codename": "add_likes",
+        "name": "Can add likes",
+        "content_type": [
+            "test_task",
+            "likes"
+        ]
+    },
+    "model": "auth.permission",
+    "pk": 22
+},
+{
+    "fields": {
+        "codename": "change_likes",
+        "name": "Can change likes",
+        "content_type": [
+            "test_task",
+            "likes"
+        ]
+    },
+    "model": "auth.permission",
+    "pk": 23
+},
+{
+    "fields": {
+        "codename": "delete_likes",
+        "name": "Can delete likes",
+        "content_type": [
+            "test_task",
+            "likes"
+        ]
+    },
+    "model": "auth.permission",
+    "pk": 24
+},
+{
+    "fields": {
+        "codename": "add_comment",
+        "name": "Can add comment",
+        "content_type": [
+            "test_task",
+            "comment"
+        ]
+    },
+    "model": "auth.permission",
+    "pk": 25
+},
+{
+    "fields": {
+        "codename": "change_comment",
+        "name": "Can change comment",
+        "content_type": [
+            "test_task",
+            "comment"
+        ]
+    },
+    "model": "auth.permission",
+    "pk": 26
+},
+{
+    "fields": {
+        "codename": "delete_comment",
+        "name": "Can delete comment",
+        "content_type": [
+            "test_task",
+            "comment"
+        ]
+    },
+    "model": "auth.permission",
+    "pk": 27
+},
+{
+    "fields": {
+        "username": "admin",
+        "first_name": "",
+        "last_name": "",
+        "is_active": true,
+        "is_superuser": true,
+        "is_staff": true,
+        "last_login": "2016-02-17T22:24:47.352Z",
+        "groups": [],
+        "user_permissions": [],
+        "password": "pbkdf2_sha256$20000$kOPNSobNp1x9$4FfwvnMqKCSYSihcDdW2THt6zqDliOIrBZqToaaW4/U=",
+        "email": "",
+        "date_joined": "2016-02-17T15:55:11.039Z"
+    },
+    "model": "auth.user",
+    "pk": 1
+},
+{
+    "fields": {
+        "username": "smith",
+        "first_name": "",
+        "last_name": "",
+        "is_active": true,
+        "is_superuser": true,
+        "is_staff": true,
+        "last_login": "2016-02-17T22:25:15.655Z",
+        "groups": [],
+        "user_permissions": [],
+        "password": "pbkdf2_sha256$20000$WBz5QQLgqQzf$NhNBipxqq8CLZKCRoBnriudf4AzCcfWwd/aVv/wsM3k=",
+        "email": "",
+        "date_joined": "2016-02-17T22:24:27Z"
+    },
+    "model": "auth.user",
+    "pk": 2
+},
+{
+    "fields": {
+        "product": 3,
+        "user": [
+            "admin"
+        ]
+    },
+    "model": "test_task.likes",
+    "pk": 6
+},
+{
+    "fields": {
+        "product": 2,
+        "user": [
+            "admin"
+        ]
+    },
+    "model": "test_task.likes",
+    "pk": 7
+},
+{
+    "fields": {
+        "product": 5,
+        "user": [
+            "admin"
+        ]
+    },
+    "model": "test_task.likes",
+    "pk": 8
+},
+{
+    "fields": {
+        "product": 4,
+        "user": [
+            "smith"
+        ]
+    },
+    "model": "test_task.likes",
+    "pk": 9
+},
+{
+    "fields": {
+        "product": 2,
+        "user": [
+            "smith"
+        ]
+    },
+    "model": "test_task.likes",
+    "pk": 10
+},
+{
+    "fields": {
+        "product": 3,
+        "user": [
+            "smith"
+        ]
+    },
+    "model": "test_task.likes",
+    "pk": 11
+},
+{
+    "fields": {
+        "product": 5,
+        "user": [
+            "smith"
+        ]
+    },
+    "model": "test_task.likes",
+    "pk": 12
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-02-17T15:55:44.580Z",
+        "object_repr": "Product object",
+        "object_id": "1",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "test_task",
+            "product"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 1
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2016-02-17T15:57:11.652Z",
+        "object_repr": "Product object",
+        "object_id": "1",
+        "change_message": "No fields changed.",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "test_task",
+            "product"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 2
+},
+{
+    "fields": {
+        "action_flag": 3,
+        "action_time": "2016-02-17T15:57:42.406Z",
+        "object_repr": "Product object",
+        "object_id": "1",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "test_task",
+            "product"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 3
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-02-17T15:57:52.147Z",
+        "object_repr": "Product object",
+        "object_id": "2",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "test_task",
+            "product"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 4
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2016-02-17T15:57:59.076Z",
+        "object_repr": "Product object",
+        "object_id": "2",
+        "change_message": "No fields changed.",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "test_task",
+            "product"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 5
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2016-02-17T15:58:02.124Z",
+        "object_repr": "Product object",
+        "object_id": "2",
+        "change_message": "No fields changed.",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "test_task",
+            "product"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 6
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2016-02-17T16:58:39.905Z",
+        "object_repr": "asdasdasdasdasd",
+        "object_id": "2",
+        "change_message": "Changed name, slug and description.",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "test_task",
+            "product"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 7
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-02-17T17:15:14.126Z",
+        "object_repr": "Mobile",
+        "object_id": "3",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "test_task",
+            "product"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 8
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-02-17T17:15:33.157Z",
+        "object_repr": "Mobile",
+        "object_id": "4",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "test_task",
+            "product"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 9
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-02-17T17:16:03.360Z",
+        "object_repr": "Telephone",
+        "object_id": "5",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "test_task",
+            "product"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 10
+},
+{
+    "fields": {
+        "action_flag": 3,
+        "action_time": "2016-02-17T21:51:03.064Z",
+        "object_repr": "Likes object",
+        "object_id": "3",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "test_task",
+            "likes"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 11
+},
+{
+    "fields": {
+        "action_flag": 3,
+        "action_time": "2016-02-17T21:51:03.214Z",
+        "object_repr": "Likes object",
+        "object_id": "2",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "test_task",
+            "likes"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 12
+},
+{
+    "fields": {
+        "action_flag": 3,
+        "action_time": "2016-02-17T21:51:03.331Z",
+        "object_repr": "Likes object",
+        "object_id": "1",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "test_task",
+            "likes"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 13
+},
+{
+    "fields": {
+        "action_flag": 3,
+        "action_time": "2016-02-17T22:13:48.011Z",
+        "object_repr": "Likes object",
+        "object_id": "5",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "test_task",
+            "likes"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 14
+},
+{
+    "fields": {
+        "action_flag": 3,
+        "action_time": "2016-02-17T22:13:48.145Z",
+        "object_repr": "Likes object",
+        "object_id": "4",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "test_task",
+            "likes"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 15
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2016-02-17T22:24:28.088Z",
+        "object_repr": "smith",
+        "object_id": "2",
+        "change_message": "",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 16
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2016-02-17T22:25:07.165Z",
+        "object_repr": "smith",
+        "object_id": "2",
+        "change_message": "Changed is_staff and is_superuser.",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ]
+    },
+    "model": "admin.logentry",
+    "pk": 17
+}
+]
