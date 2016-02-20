@@ -1,5 +1,6 @@
-from django.contrib.auth.decorators import login_required
+from django.core.urlresolvers import reverse
 from django.shortcuts import render, get_object_or_404, redirect
+from django.views.generic import View
 from models import Product, Comment, Likes
 from forms import CommentForm
 from django.contrib import messages
@@ -8,67 +9,81 @@ from django.db.models import Count
 from django.core.cache import cache
 
 
-def product_list(request):
-    if 'products' not in cache:
-        products = Product.objects.annotate(
-            action_count=Count('product_like')).order_by(
-            request.GET.get('order_by', '-action_count'))
-        cache.set('products', products, 60)
-    else:
-        products = cache.get('products')
+class ProductList(View):
 
-    context = {'products': products}
-    return render(request, 'test_task/product_list.html',
-                  context)
+    def get(self, request):
+        if 'products' not in cache:
+            products = Product.objects.annotate(
+                action_count=Count('product_like')).order_by(
+                request.GET.get('order_by', '-action_count')).values(
+                'name', 'slug', 'description', 'price', 'action_count')
+            cache.set('products', products, 60)
+        else:
+            products = cache.get('products')
+
+        context = {'products': products}
+        return render(request, 'test_task/product_list.html',
+                      context)
 
 
-def product_detail(request, slug):
-    if 'product' not in cache:
+class ProductDetail(View):
+
+    def get(self, request, slug):
         product = get_object_or_404(Product, slug=slug)
-        cache.set('product', product, 60)
-    else:
-        product = cache.get('product')
-    like_count = Likes.objects.filter(
-        product=product).count()
-    like = True
-    if request.user.is_authenticated():
-        try:
-            like = Likes.objects.get(user=request.user,
-                                     product=product)
-        except Likes.DoesNotExist:
-            like = False
-    comments = Comment.objects.filter(product=product,
-                                      pub_date__range=[
-                                          t.now() - t.timedelta(hours=24),
-                                          t.now()
-                                      ])
-    form = CommentForm(initial={'product': product.id})
+        like = True
+        if request.user.is_authenticated():
+            like = Likes.objects.filter(user=request.user,
+                                        product=product).exists()
+        comments = Comment.objects.filter(product=product,
+                                          pub_date__range=[
+                                              t.now() - t.timedelta(hours=24),
+                                              t.now()
+                                          ]).values('name', 'comment')
+        form = CommentForm(initial={'product': product})
 
-    if request.method == "POST":
+        context = {'product': product,
+                   'comments': comments,
+                   'form': form,
+                   'like': like}
+        return render(request, 'test_task/product_detail.html',
+                      context)
+
+    def post(self, request, slug):
+        product = get_object_or_404(Product, slug=slug)
+        like = True
+        if request.user.is_authenticated():
+            like = Likes.objects.filter(user=request.user,
+                                        product=product).exists()
+        comments = Comment.objects.filter(product=product,
+                                          pub_date__range=[
+                                              t.now() - t.timedelta(hours=24),
+                                              t.now()
+                                          ]).values('name', 'comment')
         form = CommentForm(request.POST)
         if form.is_valid():
             form.save()
             messages.success(request,
                              'Your comment has been added!')
-            return redirect(request.META.get('HTTP_REFERER'))
+            return redirect(reverse('test_task:product_detail',
+                                    args=[product.slug]))
         else:
             messages.error(request, 'Your comment is not added.')
 
-    context = {'product': product,
-               'comments': comments,
-               'form': form,
-               'like': like,
-               'like_count': like_count}
-    return render(request, 'test_task/product_detail.html',
-                  context)
+        context = {'product': product,
+                   'comments': comments,
+                   'form': form,
+                   'like': like}
+        return render(request, 'test_task/product_detail.html',
+                      context)
 
 
-@login_required
-def add_like(request, product_id):
-    like, created = Likes.objects.get_or_create(
-        user=request.user, product_id=product_id)
-    if created:
-        like.save()
-        messages.success(request,
-                         'Your like is added!')
-    return redirect(request.META.get('HTTP_REFERER'))
+class AddLike(View):
+
+    def get(self, request, product_id):
+        like, created = Likes.objects.get_or_create(
+            user=request.user, product_id=product_id)
+        if created:
+            like.save()
+            messages.success(request,
+                             'Your like is added!')
+        return redirect(request.META.get('HTTP_REFERER'))

@@ -10,14 +10,15 @@ client = Client()
 class ProfileMethodTests(TestCase):
 
     def setUp(self):
-        Product.objects.create(name='product',
-                               slug='product',
-                               description='description',
-                               price='200').save()
-        Product.objects.create(name='test',
-                               slug='test',
-                               description='test',
-                               price='100').save()
+        Product.objects.bulk_create([
+            Product(name='product',
+                    slug='product',
+                    description='description',
+                    price='200'),
+            Product(name='test',
+                    slug='test',
+                    description='test',
+                    price='100')])
         # get profile_detail page
         self.response = self.client.get(reverse('test_task:product_detail',
                                                 args=['product']))
@@ -34,9 +35,8 @@ class ProfileMethodTests(TestCase):
         Testing product shown in the page
         """
         # get product
-        product = Product.objects.get(slug='product')
         # test context product detail view
-        self.assertEqual(self.response.context['product'], product)
+        self.assertTrue(self.response.context['product'])
         # test product data exist on the main page
         # test product price on the page
         self.assertContains(self.response, u'200')
@@ -79,11 +79,8 @@ class ProfileMethodTests(TestCase):
             'name': 'name',
             'comment': 'comment'
         }
-        # add comment
-        form = CommentForm(form_data)
-        # test if form is valid
-        self.assertTrue(form.is_valid())
-        form.save()
+        self.client.post(reverse('test_task:product_detail',
+                                 args=[product.slug]), form_data)
         # count if new comment created
         updated_comment = Comment.objects.count()
         self.assertEqual(updated_comment, 1)
@@ -99,6 +96,10 @@ class ProfileMethodTests(TestCase):
             'name': '',
             'comment': ''
         }
+        response = self.client.post(reverse('test_task:product_detail',
+                                            args=['product']), form_data)
+        # test if errors shown on the page
+        self.assertIn('This field is required.', response.content)
         # add comment
         form = CommentForm(form_data)
         # test form fields required
